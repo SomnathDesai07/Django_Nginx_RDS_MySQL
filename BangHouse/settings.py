@@ -80,6 +80,9 @@ DATABASES = {
         'NAME': 'BangHouse',
         'USER': 'root',
         'PASSWORD': 'root',
+        'HOST':'banghouse-instance.c3kyw28su80o.ap-south-1.rds.amazonaws.com',
+        'PORT':'3306'
+
     }
 }
 

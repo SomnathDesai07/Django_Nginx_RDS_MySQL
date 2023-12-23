@@ -20,18 +20,16 @@ def result(r):
             bath = form.cleaned_data['bath']
 
 
-
-            # Load the model
             models_dir = os.path.join(os.path.dirname(__file__), 'models')
             pickle_file_path = os.path.join(models_dir, 'RidgeModel.pkl')
             with open(pickle_file_path, 'rb') as model_file:
                 model = pickle.load(model_file)
 
-            # Perform prediction
+
             input_data = pd.DataFrame([[location,size, total_sqft, bath]], columns=['location','size', 'total_sqft', 'bath'])
             predicted_price = round(model.predict(input_data)[0])
 
-            # Save data to the database
+
             house = form.save(commit=False)
             house.price = predicted_price
             house.save()
