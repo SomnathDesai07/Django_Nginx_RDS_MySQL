@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'BangHouse',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'admin',
+        'PASSWORD': 'Admin$4618',
         'HOST':'banghouse-instance.c3kyw28su80o.ap-south-1.rds.amazonaws.com',
         'PORT':'3306'
 
